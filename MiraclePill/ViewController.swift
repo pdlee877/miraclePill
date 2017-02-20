@@ -6,6 +6,16 @@
 //  Copyright © 2017 Paula Lee. All rights reserved.
 //
 
+
+
+// ****** NOTE ******
+// this needs major refactoring as it is NOT DRY at all, but since I am still unfamiliar with swift
+// I will come back and refactor with methods when I better understand them
+// I wanted to do this the long way to get a feel of what I needed to do without
+// the methods, and realized I really wish I knew the methods. So I'll come back
+// and clean this code up later.
+
+
 // an outlet is reference to something you can change
 // action - is an action that the user performs in upon the
 //      action being performed it calls some code

@@ -172,6 +172,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Js-EF-qaL">
+                                <rect key="frame" x="92" y="671" width="230" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="5Bm-kd-R5D"/>
+                                    <constraint firstAttribute="width" constant="230" id="JE3-7m-GyQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Pl-sd-cOa"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="UEM-Yf-VNM">
+                                <rect key="frame" x="87" y="265" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -183,6 +198,7 @@
                             <constraint firstItem="t5t-MD-qlY" firstAttribute="trailing" secondItem="mbw-Dw-Scw" secondAttribute="trailing" id="41V-GC-Ewy"/>
                             <constraint firstItem="ftW-2Y-sKU" firstAttribute="leading" secondItem="v5Y-Ny-wCy" secondAttribute="leading" id="7b8-cs-dOt"/>
                             <constraint firstItem="v5Y-Ny-wCy" firstAttribute="top" secondItem="SZ5-Id-EUB" secondAttribute="bottom" constant="8" id="8eV-SO-PCP"/>
+                            <constraint firstItem="2Js-EF-qaL" firstAttribute="centerX" secondItem="t5t-MD-qlY" secondAttribute="centerX" id="9LT-pB-NWI"/>
                             <constraint firstItem="tqA-RT-Yzb" firstAttribute="top" secondItem="8V7-mx-1Ne" secondAttribute="bottom" constant="10" id="9ot-FZ-Qi3"/>
                             <constraint firstItem="M8K-ve-bi8" firstAttribute="trailing" secondItem="DKT-sa-NE8" secondAttribute="trailing" id="CRM-z5-7WO"/>
                             <constraint firstItem="DKT-sa-NE8" firstAttribute="trailing" secondItem="6wO-Qp-oKi" secondAttribute="trailing" id="Dma-LA-q4m"/>
@@ -212,6 +228,7 @@
                             <constraint firstItem="tqA-RT-Yzb" firstAttribute="centerX" secondItem="8V7-mx-1Ne" secondAttribute="centerX" id="dVu-vq-0A0"/>
                             <constraint firstItem="9Fi-v5-RJx" firstAttribute="leading" secondItem="sfT-vh-ccJ" secondAttribute="leading" id="i4I-yN-X7l"/>
                             <constraint firstItem="6wO-Qp-oKi" firstAttribute="top" secondItem="tqA-RT-Yzb" secondAttribute="bottom" constant="14" id="k3P-vp-5Fp"/>
+                            <constraint firstItem="2Js-EF-qaL" firstAttribute="top" secondItem="t5t-MD-qlY" secondAttribute="bottom" constant="16" id="kd4-ln-4Sz"/>
                             <constraint firstItem="F6X-R9-X1C" firstAttribute="leading" secondItem="ftW-2Y-sKU" secondAttribute="leading" id="kv3-1t-v9j"/>
                             <constraint firstItem="ftW-2Y-sKU" firstAttribute="top" secondItem="v5Y-Ny-wCy" secondAttribute="bottom" constant="8" id="lK8-Ey-Uoo"/>
                             <constraint firstItem="mbw-Dw-Scw" firstAttribute="top" secondItem="F6X-R9-X1C" secondAttribute="bottom" constant="8" id="m9E-Sb-g8k"/>
@@ -228,20 +245,35 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="M8K-ve-bi8" id="f9S-mD-hR9"/>
+                        <outlet property="addressValue" destination="SZ5-Id-EUB" id="PUv-ga-kdI"/>
+                        <outlet property="buyNowBtn" destination="2Js-EF-qaL" id="JkG-23-Xz4"/>
+                        <outlet property="cityLabel" destination="v5Y-Ny-wCy" id="zdm-sc-Zpt"/>
+                        <outlet property="cityValue" destination="ftW-2Y-sKU" id="2f0-Vk-THd"/>
                         <outlet property="countryLabel" destination="aRB-Y7-9za" id="T2c-IQ-7CA"/>
                         <outlet property="countryValue" destination="F6X-R9-X1C" id="OF4-BE-ntY"/>
+                        <outlet property="lineDivider" destination="tqA-RT-Yzb" id="q9g-R1-ATH"/>
+                        <outlet property="mpTitle" destination="f6W-vP-bFZ" id="jg8-de-Cjm"/>
+                        <outlet property="nameLabel" destination="6wO-Qp-oKi" id="jhP-Xh-cfl"/>
+                        <outlet property="nameValue" destination="DKT-sa-NE8" id="HUl-Qr-u7f"/>
+                        <outlet property="pillImage" destination="EyQ-Ed-duR" id="JtY-EO-Vd2"/>
+                        <outlet property="price" destination="8V7-mx-1Ne" id="OyH-OR-rYl"/>
+                        <outlet property="stateLabel" destination="sfT-vh-ccJ" id="nkv-40-9MZ"/>
                         <outlet property="statePicker" destination="mGz-7T-gJg" id="ldo-Me-AbW"/>
                         <outlet property="statePickerBtn" destination="9Fi-v5-RJx" id="1oP-08-tDO"/>
+                        <outlet property="successImage" destination="UEM-Yf-VNM" id="0xj-f3-89b"/>
                         <outlet property="zipcodeLabel" destination="mbw-Dw-Scw" id="ETk-Yo-Eer"/>
                         <outlet property="zipcodeValue" destination="t5t-MD-qlY" id="94t-7k-krO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="31.884057971014496" y="36.684782608695656"/>
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

@@ -6,6 +6,16 @@
 //  Copyright © 2017 Paula Lee. All rights reserved.
 //
 
+
+
+// ****** NOTE ******
+// this needs major refactoring as it is NOT DRY at all, but since I am still unfamiliar with swift
+// I will come back and refactor with methods when I better understand them
+// I wanted to do this the long way to get a feel of what I needed to do without
+// the methods, and realized I really wish I knew the methods. So I'll come back
+// and clean this code up later.
+
+
 // an outlet is reference to something you can change
 // action - is an action that the user performs in upon the
 //      action being performed it calls some code
@@ -22,12 +32,25 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var pillImage: UIImageView!
+    @IBOutlet weak var mpTitle: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var lineDivider: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameValue: UITextField!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressValue: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityValue: UITextField!
+    @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryValue: UITextField!
     @IBOutlet weak var zipcodeLabel: UILabel!
     @IBOutlet weak var zipcodeValue: UITextField!
+    @IBOutlet weak var buyNowBtn: UIButton!
+    @IBOutlet weak var successImage: UIImageView!
     
     
     
@@ -77,6 +100,30 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryValue.isHidden = false
         zipcodeLabel.isHidden = false
         zipcodeValue.isHidden = false
+        buyNowBtn.isHidden = false
+    }
+    
+    
+    @IBAction func buyNowSelected(_ sender: Any) {
+        pillImage.isHidden = true
+        mpTitle.isHidden = true
+        price.isHidden = true
+        lineDivider.isHidden = true
+        nameLabel.isHidden = true
+        nameValue.isHidden = true
+        addressLabel.isHidden = true
+        addressValue.isHidden = true
+        cityLabel.isHidden = true
+        cityValue.isHidden = true
+        stateLabel.isHidden = true
+        statePicker.isHidden = true
+        statePickerBtn.isHidden = true
+        countryLabel.isHidden = true
+        countryValue.isHidden = true
+        zipcodeLabel.isHidden = true
+        zipcodeValue.isHidden = true
+        buyNowBtn.isHidden = true
+        successImage.isHidden = false
     }
 
 }
